@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Baobab Bites Café - Taste of The Gambia</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header>
+<h1>Baobab Bites Café ☕</h1>
+    <nav>
+    <ul>
+    <li><a href="index.html#hero">Home</a></li>
+    <li><a href="portfolio.html">Menu</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    </ul>
+</nav>
+</header>
+<main>
+    <section id="hero" class="hero">
+    <h1>Welcome to Baobab Bites Café</h1>
+    <p>Your Favorite Coffee & Light Bites in Jalangbam</p>
+    <a href="portfolio.html" class="btn">View Our Menu</a>
+    </section>
+
+    <section class="about">
+    <h2>About Us</h2>
+    <p>
+        Hi, I’m <strong>Ismaila Jallow</strong> 🕊️
+        <br><br>
+        I’m a Gambian man, born and raised in <strong>Jalangbam</strong>. As a boy growing up here, I always wished we had a cozy place to sit, work, and enjoy a really good cup of coffee.
+        <br><br>
+        In 2023, I decided to stop wishing and start building. I opened Baobab Bites Café with my own savings, one coffee machine, and so much hope. I wanted to create a space where students, families, and friends in Jalangbam could feel proud, welcome, and caffeinated.
+        <br><br>
+        For me, coffee is everything. It’s strength, comfort, and community in a cup. That’s why I created our <strong>Baobab Latte</strong> — my favorite. It’s espresso and steamed milk with a little taste of home: baobab powder. It’s become what we’re known for.
+        <br><br>
+        Our team is at the heart of Baobab Bites Café. My employees are warm, hardworking people who help keep every cup perfect, every pastry fresh, and every guest smiling. They greet customers, prepare drinks with care, and make sure every booking feels welcome.
+        <br><br>
+        Our customers keep me going. They say things like “Ismaila’s coffee is the best in town” and “this place feels like family.” As a man running this business, hearing that from my own community means the everything to me.
+        <br><br>
+        Baobab Bites Café is more than coffee. It’s a Jalangbam dream come true. Thank you for being part of it.
+        <br><br>
+        With love,
+        — <strong>Ismaila</strong>
+    </p>
+    </section>
+
+    <section class="featured">
+    <h2>Today's Specials</h2>
+    <div class="menu-grid">
+        <div class="card">
+            <img src="images/baobab-latte.jpg" alt="Baobab Latte">
+            <h3>Baobab Latte</h3>
+            <p>Our signature coffee with a local twist</p>
+            <p><strong>D120</strong></p>
+        </div>
+        <div class="card">
+            <img src="images/cappuccino.jpg" alt="Butter Croissant">
+            <h3>Butter Croissant</h3>
+            <p>Freshly baked every morning</p>
+            <p><strong>D80</strong></p>
+        </div>
+        <div class="card">
+            <img src="images/Attaya.jpeg" alt="Attaya">
+            <h3>Attaya</h3>
+            <p>3 rounds of sweet green tea</p>
+            <p><strong>D50</strong></p>
+        </div>
+    </div>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2026 Baobab Bites Café | Jalangbam, The Gambia</p>
+    
+    <div class="social-icons">
+    <!-- WhatsApp Link -->
+    <a href="https://wa.me/2207480021?text=Hi%20Baobab%20Bites!%20I%20would%20like%20to%20book%20a%20table" target="_blank" rel="noopener noreferrer">
+        <img src="https://cdn-icons-png.flaticon.com/512/124/124034.png" alt="WhatsApp">
+    </a>
+    
+    <!-- Instagram Link -->
+    <a href="https://instagram.com/stisla2021" target="_blank" rel="noopener noreferrer">
+        <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">
+    </a>
+    </div>
+
+    <p>WhatsApp: +220 748 0021</p>
+</footer>
+
+<script>
+    const form = document.querySelector('form');
+    if (form) {
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you! Your table booking request has been sent. We will call you at +220 748 0021 to confirm.');
+            form.reset();
+        });
+    }
+</script>
+<script>
+// Smooth-scroll to #hero when clicking Home or loading index.html#hero
+document.addEventListener('DOMContentLoaded', function() {
+    const hero = document.getElementById('hero');
+    if (!hero) return;
+
+    // If page loaded with #hero, scroll to it (handles navigation from other pages)
+    if (window.location.hash === '#hero') {
+        setTimeout(() => hero.scrollIntoView({ behavior: 'smooth', block: 'start' }), 50);
+    }
+
+    // Intercept same-page clicks to Home and smooth-scroll instead of jumping
+    document.querySelectorAll('a[href$="#hero"]').forEach(function(link) {
+        link.addEventListener('click', function(e) {
+            // Only intercept if already on the index page
+            const path = window.location.pathname.split('/').pop();
+            if (path === '' || path === 'index.html') {
+                e.preventDefault();
+                hero.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                // set hash without jumping
+                history.replaceState(null, '', 'index.html#hero');
+            }
+        });
+    });
+});
+</script>
+</body>
+</html>
+</body>
+</html>
