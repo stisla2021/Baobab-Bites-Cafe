@@ -16,7 +16,7 @@ The project uses a simple static website layout with clearly separated content, 
   - Contains a booking form with WhatsApp integration.
   - Includes the Visit Us panel with location, phone, and hours details.
 
-- `portfolio.html`
+- `menu.html`
   - The menu page.
   - Presents signature drinks, hot drinks, and cold beverages.
   - Uses card layouts and local image assets where available.
@@ -187,7 +187,7 @@ When continuing work on this project:
 
 - edit `css/style.css` for design changes
 - edit `Index.html` for homepage content
-- edit `portfolio.html` for menu page content
+- edit `menu.html` for menu page content
 - edit `Contact.html` for bookings and contact page updates
 - store new images in `images/`
 - keep `note.md` as the documentation file
