@@ -159,6 +159,19 @@ The update process followed these steps:
 8. Restore the homepage nav title/logo colors.
 9. Document all changes in `note.md`.
 
+### GitHub push commands
+The following commands were used in the terminal to push the website changes to GitHub:
+
+```powershell
+Set-Location 'c:\Users\stisl\Desktop\Baobab Bites Cafe'
+git status --short
+git add .
+git commit -m "Update menu assets and contact page"
+git push origin master
+```
+
+These steps stage the changes, create a commit, and push the committed files to the GitHub repository.
+
 ### Why this workflow was chosen
 The workflow prioritizes visual clarity and consistent theming. By updating global palette variables and then refining individual section blocks, the site achieves a coherent blue theme with less risk of inconsistent styling.
 
