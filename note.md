@@ -20,6 +20,7 @@ The project uses a simple static website layout with clearly separated content, 
   - The menu page.
   - Presents signature drinks, hot drinks, and cold beverages.
   - Uses card layouts and local image assets where available.
+  - Includes a QR code section that links visitors to the website.
 
 - `css/style.css`
   - The single stylesheet for the entire site.
@@ -36,6 +37,13 @@ The project uses a simple static website layout with clearly separated content, 
 - `note.md`
   - This documentation file.
   - Explains the site structure, design decisions, and recent updates.
+
+- `qr_code.png`
+  - The generated QR code image for the website.
+  - Scans directly to the GitHub Pages website URL.
+
+- `qr_code_guide.md`
+  - A short guide explaining how the QR code was created and how the terminal commands worked.
 
 - `temp_patch_note.txt`
   - Temporary working note from earlier edits.
@@ -115,6 +123,14 @@ The footer received a more prominent styled treatment:
 
 This makes the footer stand out visually as its own distinct section.
 
+### QR code feature
+A QR code was added to the website so visitors can scan it and open the café website instantly on their phones.
+
+- The QR code links to the GitHub Pages site: https://stisla2021.github.io/Baobab-Bites-Cafe/
+- A QR image file was created as `qr_code.png`.
+- QR sections were added to the homepage, contact page, and menu page.
+- A supporting guide file, `qr_code_guide.md`, was created to explain how the QR code was generated.
+
 ### Homepage branding restore
 The homepage title/logo in the header was restored to a brighter original-style look.
 The nav brand badge now uses a clear white title color and a polished background.
@@ -165,12 +181,20 @@ The following commands were used in the terminal to push the website changes to 
 ```powershell
 Set-Location 'c:\Users\stisl\Desktop\Baobab Bites Cafe'
 git status --short
-git add .
-git commit -m "Update menu assets and contact page"
+git add index.html contact.html menu.html css/style.css qr_code.png
+git commit -m "Add QR section to contact and menu pages"
 git push origin master
 ```
 
 These steps stage the changes, create a commit, and push the committed files to the GitHub repository.
+
+A second documentation push was also made for the QR guide file:
+
+```powershell
+git add qr_code_guide.md
+git commit -m "Add QR code guide documentation"
+git push origin master
+```
 
 ### Why this workflow was chosen
 The workflow prioritizes visual clarity and consistent theming. By updating global palette variables and then refining individual section blocks, the site achieves a coherent blue theme with less risk of inconsistent styling.
