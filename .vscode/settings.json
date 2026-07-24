@@ -6,6 +6,8 @@
         "Ismaila",
         "Macchiato",
         "microfoam",
+        "pathlib",
+        "qrcode",
         "stisl"
     ],
     "liveServer.settings.port": 5501
