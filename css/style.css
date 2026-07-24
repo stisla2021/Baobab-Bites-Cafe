@@ -29,6 +29,26 @@ html {
   scroll-behavior: smooth;
 }
 
+@keyframes slideInFade {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
 body {
   font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
   background: linear-gradient(180deg, #0F4E92 0%, #1E62B8 35%, #3D8CE5 70%, #AED3FF 100%);
@@ -36,6 +56,10 @@ body {
   line-height: 1.7;
   font-size: 16px;
   min-height: 100vh;
+}
+
+.brand-title-animated {
+  animation: slideInFade 0.8s ease-out, float 3s ease-in-out 0.8s infinite;
 }
 
 body::before {
