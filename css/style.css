@@ -466,6 +466,13 @@ nav a:hover {
   object-fit: cover;
   border-radius: 10px;
   margin-bottom: 12px;
+  background: #f0f0f0;
+  min-height: 160px;
+}
+
+.card img:not([src]), 
+.card img[alt] {
+  background: linear-gradient(135deg, #e0e0e0 0%, #f5f5f5 100%);
 }
 
 
@@ -748,10 +755,23 @@ footer::before {
 
 /* ===== RESPONSIVE DESIGN ===== */
 @media (max-width: 768px) {
+  .featured {
+    padding: 2rem 1rem;
+  }
+
   .menu-grid {
     grid-template-columns: 1fr;
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  .card {
     padding: 1.5rem 1rem;
-    gap: 1.5rem;
+  }
+
+  .card img {
+    height: 140px;
+    margin-bottom: 10px;
   }
 
   .hero h1 {
